@@ -13,6 +13,6 @@ win+R,在命令行模式下打开某个文件夹（file），运行一个 .py文
   会显示D:\Pycharm\pythonfile>
 步骤二：
  (type)python hello.py
- 出结果
+ 出结果ok
  
 退出：exit()
