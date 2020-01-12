@@ -1,0 +1,7 @@
+>>> sentence='Apple\'s unit price is 9 yuan.'                                                 # 做一个字符型变量
+>>> sentence1=sentence[-7]                                                                    # 提取数值（从右到左的第7位）  
+>>> print('提取了苹果的单价为：',sentence1,'。此刻它的数据类型为：',type(sentence1))           # 输出，用type()函数查看变量的数据类型
+提取了苹果的单价为： 9 。此刻它的数据类型为： <class 'str'>                                    # <str>为字符串型
+>>> sentence1=int(sentence1)                                                                  # 将提取的字符格式转换为整数格式
+>>> print('转换数据类型后为：',type(sentence1))                                               # 输出，用type()函数查看变量的数据类型
+转换数据类型后为： <class 'int'>                                                              # <int>为整数型
