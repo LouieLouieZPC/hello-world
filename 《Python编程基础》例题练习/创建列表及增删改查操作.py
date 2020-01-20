@@ -97,5 +97,24 @@ ValueError: slice step cannot be zero
 >>> month_copy+=others                                            # 使用加法赋值运算符(+=)对副本进行自增运算
 >>> month_copy
 ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'November', 'December']
-#3.11
->>> month.insert(9,'October')                                         # 在列表第10个位置上插入元素'October'
+#3.11 插入元素
+>>> month.insert(9,'October')                                     # 使用insert函数在列表第10个位置上插入元素'October'
+>>> month
+['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+>>> month.insert(20,'None')                                       # 插入位置超出列表尾端
+>>> month
+['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December', 'None']
+#使用del语句删除元素
+>>> month_copy=month.copy()                                       # 使用copy函数创建列表对象month的副本
+>>> del month_copy[-1]                                            # 用del语句删除副本最后一个元素
+>>> month_copy
+['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+#3.13 使用pop语句删除元素
+'''
+month.append(元素)
+month.extend(元素)
+month.insert(位置,元素)
+del month[位置]
+month.pop(位置)
+month.remove(元素)
+'''
