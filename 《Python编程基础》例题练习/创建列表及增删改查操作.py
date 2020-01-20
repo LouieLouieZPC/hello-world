@@ -81,6 +81,15 @@ ValueError: slice step cannot be zero
 >>> mylist[6:2]          # 提取从第7个元素向右到第三个元素之间的所有元素
 []                       # 返回一个空列表
 
+'''
+month.append(元素)
+month.extend(元素)
+month.insert(位置,元素)
+del month[位置]
+month.pop(位置)
+month.remove(元素)
+'''
+
 #3.9 追加元素
 >>> month=['January','February','March','April','May','June']
 >>> month.append('July')                                          # 使用append函数向列表尾部追加元素
@@ -110,11 +119,3 @@ ValueError: slice step cannot be zero
 >>> month_copy
 ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 #3.13 使用pop语句删除元素
-'''
-month.append(元素)
-month.extend(元素)
-month.insert(位置,元素)
-del month[位置]
-month.pop(位置)
-month.remove(元素)
-'''
