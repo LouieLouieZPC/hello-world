@@ -86,10 +86,7 @@ ValueError: slice step cannot be zero
 >>> month.append('July')                                          # 使用append函数向列表尾部追加元素
 >>> month                                                         # 查看列表内容
 ['January', 'February', 'March', 'April', 'May', 'June', 'July']
-
-
 #3.10追加多个元素
->>> month=['January','February','March','April','May','June']
 >>> month_copy=month.copy()                                       # 使用copy函数创建一个列表对象month的副本，理由稍后解释
 >>> month_copy
 ['January', 'February', 'March', 'April', 'May', 'June', 'July']
@@ -100,3 +97,5 @@ ValueError: slice step cannot be zero
 >>> month_copy+=others                                            # 使用加法赋值运算符(+=)对副本进行自增运算
 >>> month_copy
 ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'November', 'December']
+#3.11
+month.insert(9,'October')                                         # 在列表第10个位置上插入元素'October'
