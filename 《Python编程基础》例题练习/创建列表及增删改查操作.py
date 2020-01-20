@@ -98,4 +98,4 @@ ValueError: slice step cannot be zero
 >>> month_copy
 ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'November', 'December']
 #3.11
-month.insert(9,'October')                                         # 在列表第10个位置上插入元素'October'
+>>> month.insert(9,'October')                                         # 在列表第10个位置上插入元素'October'
