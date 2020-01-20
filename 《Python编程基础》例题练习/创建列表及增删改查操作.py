@@ -180,3 +180,45 @@ month.remove(元素)
 2
 >>> 'D' in letter                                                 # 使用in函数判断列表是否包含元素
 True
+
+
+#3.19
+>>> letter=['A','B','C','D','A','C','D','A']                      
+>>> letter.count('A')                                             # 使用count函数进行元素计数，获取元素'A'在列表中出现的次数
+3
+>>> sorted(letter)                                                # 使用sorted函数对列表进行排序，不改变列表
+['A', 'A', 'A', 'B', 'C', 'C', 'D', 'D']
+>>> letter
+['A', 'B', 'C', 'D', 'A', 'C', 'D', 'A']
+>>> letter.sort()                                                 # 使用列表方法sort对列表进行排序，但会改变列表
+>>> letter
+['A', 'A', 'A', 'B', 'C', 'C', 'D', 'D']
+>>> letter.sort(reverse=True)                                     # 使用列表方法sort对列表进行倒序排序，但会改变列表
+>>> letter
+['D', 'D', 'C', 'C', 'B', 'A', 'A', 'A']
+>>> season=['spring','summer','autumn','winter']
+>>> season.reverse()                                              # 使用reserve函数反转列表
+>>> season
+['winter', 'autumn', 'summer', 'spring']
+>>> len(season)                                                   # 使用函数len获取列表长度
+4
+>>> [1,2,3]+[4,5,6]                                               # 使用列表加法合并两个列表
+[1, 2, 3, 4, 5, 6]
+>>> [1,2,3,4,5]*3                                                 # 使用列表乘法重复合并列表
+[1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+
+# 作业
+>>> list1=[110,'dog','cat',120,'apple']                           # 定义变量
+>>> list1.insert(2,[])                                            # 在第个二元素插入空列表
+>>> list1
+[110, 'dog', [], 'cat', 120, 'apple']
+>>> list1.remove('apple')                                         # 删除元素
+>>> list1
+[110, 'dog', [], 'cat', 120]
+>>> list1.index('cat')                                            # 查询元素位置
+3
+>>> list1[4]*=10                                                  # 提取元素，进行列表乘法重复运算以修改元素
+>>> list1                                                         # 查看列表
+[110, 'dog', [], 'cat', 1200]
+>>> print(list1)                                                  # 输出列表
+[110, 'dog', [], 'cat', 1200]
