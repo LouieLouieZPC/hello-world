@@ -1,0 +1,5 @@
+name=input('请输入名称：')
+print('hello，'+name)
+print('欢迎回来！')
+print('等待下一步指示')
+print('what','thefuck')
