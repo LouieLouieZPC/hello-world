@@ -119,3 +119,56 @@ month.remove(元素)
 >>> month_copy
 ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 #3.13 使用pop语句删除元素
+>>> month_copy=month.copy()                                       # 创建一个列表对象month的副本
+>>> month_copy.pop(3)                                             # 使用pop函数获取并删除第4个元素
+'April'
+>>> del_element=month_copy.pop()                                  # 将最后一个元素赋值给一个变量并在副本中删除
+>>> del_element                                                   # 查看删除元素
+'None'
+>>> month_copy                                                    # 查看副本
+['January', 'February', 'March', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+#3.14使用remove语句删除列表元素
+>>> month.remove('None')                                          # 使用remove语句删除列表中的元素'None'
+>>> month
+['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+#3.15
+>>> month[0]='Jan'                                                # 将一个元素改成缩写形式
+>>> month
+['Jan', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
+
+#3.16
+>>> a=[1,2,3,4,]                                                  # 变量名a指向列表对象[1,2,3,4]
+>>> b=a                                                           # 变量名b也指向列表对象[1,2,3,4]
+>>> a.append(5)                                                   # 列表尾端追加元素5
+>>> a                                                             # 通过变量b查看列表
+[1, 2, 3, 4, 5]
+>>> b                                                             # 通过变量b查看列表
+[1, 2, 3, 4, 5]
+
+
+#3.17
+"""
+# 使用copy方法创建副本:变量名1=变量名2.copy()
+# 使用切片操作创建副本：变量名1=变量名2[:]
+# 使用list函数创建副本：变量名1=list(变量名2)
+
+"""
+>>> a=[10,20,30,40,50]
+>>> b=a.copy()                                                    # 使用copy方法创建副本:变量名1=变量名2.copy()
+>>> c=a[:]                                                        # 使用切片操作创建副本：变量名1=变量名2[:]
+>>> d=list(a)                                                     # 使用list函数创建副本：变量名1=list(变量名2)
+>>> id(a);id(b);id(c);id(d)                                       # 查看变量对象id
+1776541171328
+1776570869824
+1776570871040
+1776570871552
+>>> b[2]='three'                                                  # 修改副本第3个元素
+>>> b
+[10, 20, 'three', 40, 50]
+>>> a                                                             # 原列表并没有发生变化
+[10, 20, 30, 40, 50]
+>>> c
+[10, 20, 30, 40, 50]
+>>> d
+[10, 20, 30, 40, 50]
