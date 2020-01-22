@@ -72,4 +72,27 @@
     >>> country['Japan']='tokyo'                  # 直接新值赋给对应元素
     >>> country
     {'China': 'Beijing', 'America': 'Washington', 'Britain': 'London', 'French': 'Paris', 'Australia': 'Canberra', 'Japan': 'tokyo'}
-#3.7
+#3.37
+    >>> 'Canada' in country                       
+    False
+    >>> all_keys=country.keys()                   # 使用keys函数获取全部键
+    >>> all_keys
+    dict_keys(['China', 'America', 'Britain', 'French', 'Australia', 'Japan'])
+    >>> all_values=country.values()               # 使用values函数获取全部值
+    >>> all_values
+    dict_values(['Beijing', 'Washington', 'London', 'Paris', 'Canberra', 'tokyo'])
+    >>> 'Baijing' in all_values
+    False
+    >>> 'Beijing' in all_values                   # 判断字典是否包含此值
+    True
+    >>> list(all_values)                          # 将值的迭代形式转化为列表形式
+    ['Beijing', 'Washington', 'London', 'Paris', 'Canberra', 'tokyo']
+    >>> all_items=country.items()                 # 使用items函数得到全部键值对
+    >>> all_items
+    dict_items([('China', 'Beijing'), ('America', 'Washington'), ('Britain', 'London'), ('French', 'Paris'), ('Australia', 'Canberra'), ('Japan', 'tokyo')])
+    >>> ('America','Washington') in all_items     # 判断字典是否包含此键值对
+    True
+    >>> all_items
+    dict_items([('China', 'Beijing'), ('America', 'Washington'), ('Britain', 'London'), ('French', 'Paris'), ('Australia', 'Canberra'), ('Japan', 'tokyo')])
+    >>> list(all_items)                           # 将键值对的迭代形式转换为列表形式
+    [('China', 'Beijing'), ('America', 'Washington'), ('Britain', 'London'), ('French', 'Paris'), ('Australia', 'Canberra'), ('Japan', 'tokyo')]
