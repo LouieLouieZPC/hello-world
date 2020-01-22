@@ -96,3 +96,28 @@
     dict_items([('China', 'Beijing'), ('America', 'Washington'), ('Britain', 'London'), ('French', 'Paris'), ('Australia', 'Canberra'), ('Japan', 'tokyo')])
     >>> list(all_items)                           # 将键值对的迭代形式转换为列表形式
     [('China', 'Beijing'), ('America', 'Washington'), ('Britain', 'London'), ('French', 'Paris'), ('Australia', 'Canberra'), ('Japan', 'tokyo')]
+
+
+#3.38
+    >>> test={'A':100,'B':300,'C':True,'D':200}   
+    >>> keys=list(test.keys())                    # ①使用key函数得到全部键②使用list函数将键的迭代形式转换为列表形式
+    >>> values=list(test.values())                # 同上
+    >>> keys
+    ['A', 'B', 'C', 'D']
+    >>> values
+    [100, 300, True, 200]
+    >>> keys[values.index(True)]                  # 故可利用值True的索引index来提取对应的键
+    'C'
+
+
+#Task
+    >>> # -*-coding:utf-8-*-
+
+    >>> dict1={'Math':96,'English':86,'Chinese':95.5,'Biology':86,'Physics':None}      
+    >>> dict1['History']=88                               # 增添键值对
+    >>> del dict1['Physics']                              # 删除键值对
+    >>> dict1['Chinese']=int(round(dict1['Chinese']))     # 将成绩进行四舍五入取整
+    >>> dict1['Math']                                     # 查看键的对应值
+    96
+    >>> dict1                                             # 查看处理后的字典
+    {'Math': 96, 'English': 86, 'Chinese': 96, 'Biology': 86, 'History': 88}
