@@ -1,9 +1,0 @@
- #3.26
-    >>> mydict1={'myint':1,'myfloat':3.1415,'mystr':'name','myint':100,'mytuple':(1,2,3),'mydict':{}}    # 使用花括号创建字典
-    >>> mydict1
-    {'myint': 100, 'myfloat': 3.1415, 'mystr': 'name', 'mytuple': (1, 2, 3), 'mydict': {}}               # 对于重复的键，键会采用最后出现的对应值
-    >>> empty_dict=()                                                                                    # 创建一个空字典                  
-    >>> empty_dict 
-    ()
-
-#3.27
