@@ -1,0 +1,104 @@
+#3.39 
+    >>> myset1={'A','C','D','B','A','B'}         # 使用花括号创建可变集合
+    >>> myset1                             
+    {'A', 'B', 'C', 'D'}                         # 事实证明集合中的元素不可重复
+    >>> myset2=set([2,3,1,4,False,2.5,'one'])    # 使用set函数将列表形式转换为可变集合形式
+    >>> myset2
+    {False, 1, 2, 3, 4, 2.5, 'one'}
+    >>> empty_set=set()                          # 创建空可变集合
+    >>> empty_set
+    set()
+    >>> type(empty_set)                          # 查看变量数据类型
+    <class 'set'>
+
+
+#3.40
+    >>> myset3=frozenset([3,2,3,'one',frozenset([1,2]),True])      # 使用frozenset函数创建不可知变量
+    >>> myset3
+    frozenset({True, 2, 3, 'one', frozenset({1, 2})})              # 事实证明集合中的元素不可重复
+    >>> empty_frozenset=frozenset()                                # 创建空不可变集合
+    >>> empty_frozenset
+    frozenset()
+    >>> type(empty_frozenset)                                      # 查看变量数据类型
+    <class 'frozenset'>
+
+
+#3.41
+    >>> A={'a','b','c','d'}
+    >>> B={'e','d','c','f'}
+    >>> A|B                                     # 使用符号|获取并集
+    {'a', 'd', 'b', 'c', 'f', 'e'}
+    >>> A.union(B)                              # 使用集合方法union函数获取并集
+    {'a', 'd', 'b', 'c', 'f', 'e'}
+#3.42
+    >>> A&B                                     # 使用符号&获取交集
+    {'c', 'd'}
+    >>> A.intersection(B)                       # 使用集合方法intersection函数获取交集
+    {'c', 'd'}
+#3.43
+    >>> A-B                                     # 使用减号-来获取差集（属于A而不属于B）
+    {'a', 'b'}
+    >>> B-A                                     # 使用减号-来获取差集（属于B而不属于A）
+    {'f', 'e'}
+    >>> A.difference(B)                         # 使用集合方法difference来获取差集（属于A而不属于B）
+    {'a', 'b'}
+    >>> B.difference(A)                         # 使用集合方法difference来获取差集（属于B而不属于A）
+    {'f', 'e'}
+#3.44   
+    >>> A^B                                     # 使用符号^获取异或集
+    {'a', 'b', 'f', 'e'}
+    >>> A.symmetric_difference(B)               # 使用集合方法symmetric_difference来获取异或集
+    {'a', 'b', 'f', 'e'}
+#3.45
+    >>> C={'a','d','b'}                
+    >>> C<=A                                        # 判断子集
+    True
+    >>> C.issubset(A)                               # 使用issubset函数判断子集
+    True
+    >>> C<A;A<A                                     # 判断真子集
+    True
+    False
+    >>> A>=C                                        # 判断超集
+    True
+    >>> A.issuperset(C)                             # 使用issuperset函数判断超集
+    True
+    >>> A>C;C>C                                     # 判断真超集
+    True
+    False
+
+
+#3.46
+    >>> myset4={'red','green','blue','yellow'}       
+    >>> myset4_copy=myset4.copy()           # 创建一个集合副本对象
+    >>> others={'black','white'}
+    >>> myset4.add('orange')                # 使用集合方法add函数增添函数 
+    >>> myset4.update(others)               # 使用集合方法update函数合并两个集合
+    >>> myset4
+    {'green', 'orange', 'white', 'blue', 'black', 'red', 'yellow'}
+    >>> myset4.pop()                        # 使用pop函数从集合中抽离出一个元素（当集合是由列表和元组组成时,set.pop()是从左边删除元素的；字典和字符转换的集合是随机删除元素的）
+    'green'
+    >>> myset4
+    {'orange', 'white', 'blue', 'black', 'red', 'yellow'} 
+    >>> myset4.remove('yellow')             # 使用remove函数删除指定元素
+    >>> myset4_copy.clear()                 # 使用clear函数将副本集合内容清空
+    >>> myset4_copy                         
+    set()
+    >>> len(myset4)                         # 使用len函数获取集合元素个数
+    5
+    >>> 'green' in myset4                   # 使用in查看集合是否包含指定元素
+    False
+
+
+# Task
+    # -*-coding:utf-8-*-
+
+    >>> set1=set(['apple','pear','watermelon','peach'])         # 转换列表类型为集合类型
+    >>> set2=set(['pear','banana','orange','peach','grape'])    # 转换列表类型为集合类型
+    >>> set1|set2                                               # 求出并集
+    {'banana', 'peach', 'orange', 'grape', 'apple', 'pear', 'watermelon'}
+    >>> set1&set2                                               # 求出交集
+    {'pear', 'peach'}
+    >>> set1-set2                                               # 求出差集
+    {'apple', 'watermelon'}
+    >>> set2-set1                                               # 求出差集
+    {'grape', 'banana', 'orange'}
