@@ -1,7 +1,7 @@
  '''
 创建字典：
     1.dict={key_1:value_1,key_2:value_2,...,key_n:value_n}
-    2.变量名=dict([(key1,value1),(key2,value2),...,(keyn,value2)])
+    2.转换列表对象为字典（双值子序列）：     变量名=dict([(key1,value1),(key2,value2),...,(keyn,value2)])
     3.变量名=dict（key1=value1,key2=value2,...,keyn=valuen）
 
 测试是否存在（不会抽离原键与值）：
@@ -27,7 +27,6 @@
     1.获取所有键：                      字典名.keys()
     2.获取所有值：                      字典名.values()
     3.获取所有键值对：                  字典名.itmes()
-
 
 '''
  
@@ -145,7 +144,8 @@
     'C'
 
 
-#Task
+#Task：
+# 法一：
     >>> # -*-coding:utf-8-*-
 
     >>> dict1={'Math':96,'English':86,'Chinese':95.5,'Biology':86,'Physics':None}      
@@ -156,3 +156,4 @@
     96
     >>> dict1                                             # 查看处理后的字典
     {'Math': 96, 'English': 86, 'Chinese': 96, 'Biology': 86, 'History': 88}
+# 法二：
