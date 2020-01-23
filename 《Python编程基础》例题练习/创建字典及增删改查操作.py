@@ -1,3 +1,38 @@
+ '''
+创建字典：
+    1.dict={key_1:value_1,key_2:value_2,...,key_n:value_n}
+    2.变量名=dict([(key1,value1),(key2,value2),...,(keyn,value2)])
+    3.变量名=dict（key1=value1,key2=value2,...,keyn=valuen）
+
+测试是否存在（不会抽离原键与值）：
+    1.key in 字典名
+    2.字典名.get(key,代替值)
+
+提取字典元素（提取值，不会抽离原键与值）：
+    1.字典名[key]
+
+增加字典元素：
+    1.添加单个元素：                    字典名[key]=value
+    2.添加多个元素/合并两个字典：        字典名1.update(字典名2)
+
+删除字典元素：
+    1.删除单个原键与值：                 del 字典名[key]
+    2.会抽离原键与值：                  字典名.pop(key)/变量名=字典名.pop(key)
+    3.删除所有元素：                    字典名.clear()
+
+修改字典元素：
+    1.变量名[key]=value
+
+获取字典元素信息（所有键、所有值、所有键值对）（但不会抽离原键、值、键值对）：
+    1.获取所有键：                      字典名.keys()
+    2.获取所有值：                      字典名.values()
+    3.获取所有键值对：                  字典名.itmes()
+
+
+'''
+ 
+ 
+ 
  #3.26
     >>> mydict1={'myint':1,'myfloat':3.1415,'mystr':'name','myint':100,'mytuple':(1,2,3),'mydict':{}}    # 使用花括号创建字典
     >>> mydict1
