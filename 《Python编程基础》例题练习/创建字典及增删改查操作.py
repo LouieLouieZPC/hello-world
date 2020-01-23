@@ -151,9 +151,27 @@
     >>> dict1={'Math':96,'English':86,'Chinese':95.5,'Biology':86,'Physics':None}      
     >>> dict1['History']=88                               # 增添键值对
     >>> del dict1['Physics']                              # 删除键值对
-    >>> dict1['Chinese']=int(round(dict1['Chinese']))     # 将成绩进行四舍五入取整
+    >>> dict1['Chinese']=int(round(dict1['Chinese']))     # 将值进行四舍五入取整
     >>> dict1['Math']                                     # 查看键的对应值
     96
     >>> dict1                                             # 查看处理后的字典
     {'Math': 96, 'English': 86, 'Chinese': 96, 'Biology': 86, 'History': 88}
 # 法二：
+    >>> dict1=dict([('Math',96),('English',86),('Chinese',95.5),('Biology',86),('Physics',None)])
+    >>> dict1
+    {'Math': 96, 'English': 86, 'Chinese': 95.5, 'Biology': 86, 'Physics': None}
+    >>> dict2=dict(History=88)        # 增加键值对
+    >>> dict1
+    {'Math': 96, 'English': 86, 'Chinese': 95.5, 'Biology': 86, 'Physics': None}
+    >>> dict1.update(dict2)           # 增加键值对
+    >>> dict1
+    {'Math': 96, 'English': 86, 'Chinese': 95.5, 'Biology': 86, 'Physics': None, 'History': 88}
+    >>> x=dict1.pop('Physics')        # 删除键值对，抽离此键与值
+    >>> x
+    >>> dict1
+    {'Math': 96, 'English': 86, 'Chinese': 95.5, 'Biology': 86, 'History': 88}
+    >>> dict1['Chinese']=int(round(dict1['Chinese']))        # 将值四舍五入后取整
+    >>> dict1
+    {'Math': 96, 'English': 86, 'Chinese': 96, 'Biology': 86, 'History': 88}
+    >>> dict1['Math']                                        # 查看键的对应值
+    96
