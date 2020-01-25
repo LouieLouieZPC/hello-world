@@ -1,3 +1,58 @@
+'''
+创建可变集合：
+    1.变量名={不可变数据类型元（数字、字符串、元组、不可变集合）}
+    2.转化列表/元组为去掉重复元素、升序的字典：         变量名=set(列表/元组)
+
+创建不可变集合：
+    1.变量名=frozenset(不可变数据类型列表/列表/元组)
+
+并集：
+    1.A|B
+    2.A.union(B) 
+
+交集：
+    1.A&B     
+    2.A.intersection(B) 
+    
+差集：
+    1.B-A/B-A
+    2.A.difference(B)/B.difference(A)          
+
+异或集：
+    1.A^B
+    2.A.symmetric_difference(B)
+
+子集：   
+    1.A<=B
+    2.A.issubset(A)
+
+真子集：
+    1.B<A
+
+超集：
+    1.A>=B
+    2.A.issuperset(B)
+
+真超集：
+    1.A>B
+
+set.add:增加单个元素
+set.update：增加多个元素
+set.pop：集合中：
+1.对于由列表和元组组成的集合：是从所有元素左边删除元素的
+2.对于由字典和字符转化成的集合：是随机删除元素的
+set.remove:指定一个元素删除
+set.clear：删除所有元素
+set.copy
+in
+len
+
+
+
+'''
+
+
+
 #3.39 
     >>> myset1={'A','C','D','B','A','B'}         # 使用花括号创建可变集合
     >>> myset1                             
