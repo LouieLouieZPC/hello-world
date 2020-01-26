@@ -7,5 +7,5 @@ x=min(list1)
 print(x)
 y=list1.index(x)
 del list1[y]
-list1[5]=str(abs(list1[5]))
+list1[5]=abs(list1[5])
 print('最后结果为：',list1)
