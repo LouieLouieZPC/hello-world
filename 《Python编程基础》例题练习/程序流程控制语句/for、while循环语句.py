@@ -120,5 +120,30 @@ g
 ...
 2
 0
+>>> for i in range(0,3):
+...  if i==1:                    # 当i等于1时跳出本次循环
+...   continue                    
+...  print(i)
+...
+0
+2
+
+
+# 4.9 pass语句的使用
+>>> for i in range(0,3):
+...  if i==1:
+...   pass                  # 用于在输出结果0~1之间占位，不做任何事情
+...   print('pass块')          
+...  print(i)
+...
+0
+pass块
+1
+2
+
+
+
+
+
 
 #-*-coding:utf-8-*-
