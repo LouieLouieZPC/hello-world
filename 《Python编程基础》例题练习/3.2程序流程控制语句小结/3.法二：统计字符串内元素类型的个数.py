@@ -30,4 +30,4 @@ def strnum(element):     # 定义一个函数，
             otherCount+=1
     return(intCount,strCount,otherCount)
 element=input('请输入一段字符串：')
-print(strnum(element))
+print(strnum(element))                   # 调用函数
