@@ -11,14 +11,16 @@ while type(num) is int:
             guess+=1
             print('你第%d次输入的数字%d比电脑的随机数字大'%(guess,num))
             num=input('请再次输入数字：')
+            break
         elif num<x:         
             guess+=1
             print('你第%d次输入的数字%d比电脑的随机数字小'%(guess,num))
             num=input('请再次输入数字：')
-        break
+            break
     else:
         guess+=1
         print('恭喜您，您第%d次输入的数字%d与电脑的随机数字%d一样'%(guess,num,x))
+    continue
 else:
     print('您所输入的不符合规范，请重新输入！')
     num=int(input('请重新输入符合规范的数字：'))
