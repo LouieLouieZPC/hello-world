@@ -17,7 +17,7 @@ return [表达式] 结束函数，选择性地返回一个值给调用方。不�
 
 
 
-def strnum(element):     # 定义一个函数，
+def strnum(element):     # 自定义一个函数，
     intCount=0
     strCount=0
     otherCount=0
