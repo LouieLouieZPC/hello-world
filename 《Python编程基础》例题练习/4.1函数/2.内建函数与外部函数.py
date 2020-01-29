@@ -10,11 +10,16 @@ def mean(*args):           # 定义函数
     m=sum(args)/len(args)
     return m
 
+'''
+外部函数在返回结果时可直接调用内部函数的结果，以下!👇
+'''
 # 5.15 调用求均值函数
-def mean(*args):
-    def sum(x):
+def mean(*args):          # 定义外部函数
+    def sum(x):           # 定义内建函数
         sum1=0
         for i in x:
             sum1+=i
-        return sum1
+        return sum1       # 返回内建函数运行结果
     return sum(args)/len(args)        # 直接返回sum函数的结果
+z=[1,2,3,2]
+print(mean(*z))
