@@ -97,7 +97,21 @@ ValueError: range() arg 3 must not be zero
 
 
 # 5.10 设置关键字参数
-
-
+>>> def interest(money,day=1,interest_rate=0.05):      # 定义这么个函数,对以下整段程序逻辑封装
+...  income=0
+...  income=money*interest_rate*day/365
+...  print(income)
+>>> interest(money=5000,day=7,interest_rate=0.06)
+5.7534246575342465
+>>> interest(money=7,day=5000,interest_rate=0.06)
+5.7534246575342465
+# 5.11 调用关键字参数
+>>> interest(10000,day=7,interest_rate=0.06)
+11.506849315068493
+>>> interest(10000,interest_rate=0.06,day=7)
+11.506849315068493
+>>> interest(interest_rate=0.06,7,money=10000)
+  File "<stdin>", line 1
+SyntaxError: positional argument follows keyword argument  # 犯了位置参数跟在关键字参数后面的错误
 
 
