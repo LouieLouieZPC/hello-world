@@ -14,3 +14,7 @@ def mean(*args):           # 定义函数
 def mean(*args):
     def sum(x):
         sum1=0
+        for i in x:
+            sum1+=i
+        return sum1
+    return sum(args)/len(args)        # 直接返回sum函数的结果
