@@ -110,8 +110,30 @@ ValueError: range() arg 3 must not be zero
 11.506849315068493
 >>> interest(10000,interest_rate=0.06,day=7)
 11.506849315068493
->>> interest(interest_rate=0.06,7,money=10000)
+>>> interest(interest_rate=0.06,7,money=10000)       # money为位置参数，其他未关键字参数
   File "<stdin>", line 1
 SyntaxError: positional argument follows keyword argument  # 犯了位置参数跟在关键字参数后面的错误
 
 
+
+# 5.12 调用*arg可变参数
+# >>> arg=[0,10,2]
+>>> list(range(*arg))              # *arg可以直接将元组或者列表转换为参数
+[0, 2, 4, 6, 8] 
+
+
+#5.13 调用**kwargs可变参数
+>>> def user(username,age,**kwargs):                    # 定义函数（位置参数，位置参数，关键字可变参数）
+...  print('uesrname:',username)
+...  print('age:',age)
+...  print('other:',kwargs)
+...
+>>> user('john',27,city='guangzhou',job='Date Analyst')
+uesrname: john
+age: 27
+other: {'city': 'guangzhou', 'job': 'Date Analyst'}
+>>> kw={'age':27,'city':'guangzhou','job':'Date Analyst'}
+>>> user('john',**kw)                                   # 调用**关键词可变参数 
+uesrname: john
+age: 27
+other: {'city': 'guangzhou', 'job': 'Date Analyst'}
