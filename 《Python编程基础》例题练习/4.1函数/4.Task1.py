@@ -6,7 +6,7 @@
 内建函数2下有一个子内建函数3
 '''
 def var(*args):                                     # 主体方差函数
-    def sums(x):                                    # 内建函数1(不仅是x，可以用任意名字的位置参数)
+    def sums(x):                                    # 内建函数1(不仅是x，可以用任意名字命名的位置参数)
         sum1=0                                  # 定义局部变量1
         for i in range(len(args)):
             sum1+=args[i]**2
