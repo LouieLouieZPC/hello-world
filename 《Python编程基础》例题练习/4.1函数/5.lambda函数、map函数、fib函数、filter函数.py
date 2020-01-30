@@ -22,9 +22,29 @@ def add(x):                                # 定义函数
     x+=3
     return x
 numbers=list(range(10))
-num1=list(map(add,numbers))                # 
-num2=list(map(lambda x:x+3,numbers))
+num1=list(map(add,numbers))                # map（函数，序列）
+num2=list(map(lambda x:x+3,numbers))       # 速度更快，可读性更强
 >>> num1
-[3, 4, 5, 6, 7, 8, 9, 10, 11, 12]          # 
+[3, 4, 5, 6, 7, 8, 9, 10, 11, 12]          
 >>> num2
-[3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+[3, 4, 5, 6, 7, 8, 9, 10, 11, 12] 
+
+
+# 5.25 fib函数示例
+def fib(n):
+    if n<=2:
+        return 2
+    else:
+        return fib(n-1)+fib(n-2)
+f=fib(10)
+print(f)
+110
+
+
+# 5.26 filter函数示例
+list(filter(lambda x：x%2==1,[1,4,6,7,9,12,17]))
+s=list(filter(lambda c:c!='o','I love python and R!'))
+s='',join(s)
+print(s)
+['I', ' ', 'l', 'v', 'e', ' ', 'p', 'y', 't', 'h', 'n', ' ', 'a', 'n', 'd', ' ', 'R', '!']
+
