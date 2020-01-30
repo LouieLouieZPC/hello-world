@@ -12,5 +12,11 @@
 ...  return lambda x:log(x,base)            # 返回一个以base为底，以x为真数的匿名对数函数
 ...
 >>> my_log=make_logarithmic_function(3)     # （python允许将lambda语句作为对象赋值给变量，然后使用变量名进行调用）调用匿名函数my_log，底数已经设置为默认参数3，x为位置参数)
->>> print(my_log(9))                        # 
-2.0
+>>> print(my_log(9))                        # 设置位置参数x=9
+2.0                                         # y=log(9,3)=2.0
+
+
+
+# 5.24使用map函数实现代码5.22
+def add(x):
+    x
