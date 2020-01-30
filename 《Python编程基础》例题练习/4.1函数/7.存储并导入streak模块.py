@@ -16,4 +16,5 @@ Make a steak well done in 9 with the other:
 ———salad
 '''
 # 法二
-
+from steak import make_steak()      # from 模块名 import 函数名
+make_steak(9,'salad')               # 
