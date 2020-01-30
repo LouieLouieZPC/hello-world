@@ -18,9 +18,13 @@
 
 
 # 5.24使用map函数实现代码5.22
-def add(x):
+def add(x):                                # 定义函数
     x+=3
     return x
 numbers=list(range(10))
-num1=list(map(add,numbers))
-num2=list(map(lambda x:x+=3,numbers))
+num1=list(map(add,numbers))                # 
+num2=list(map(lambda x:x+3,numbers))
+>>> num1
+[3, 4, 5, 6, 7, 8, 9, 10, 11, 12]          # 
+>>> num2
+[3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
