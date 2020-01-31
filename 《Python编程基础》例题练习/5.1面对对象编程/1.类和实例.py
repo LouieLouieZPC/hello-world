@@ -41,10 +41,41 @@ class 类名(object)：  PS：类名是首字母大写或驼峰式命名的；ob
 
 # 二、创建类的实例：
 '''
-格式为
+格式为：
+类名+()
 '''
 
-class Cat():
-    def sleep(self):
-        print(self)
-new_cat=Cat()          # 变量new_cat指向
+>>> bart = Student()                # 变量bart指向Student的实例
+>>> bart
+<__main__.Student object at 0x10a67a590>       # 后面的0x10a67a590是内存地址，每个object的地址都不一样
+>>> Student
+<class '__main__.Student'>          # 而Student本身则是一个类
+
+
+# 三、给实例变量绑定属性：
+>>> bart.name = 'Bart Simpson'
+>>> bart.name
+'Bart Simpson'
+
+
+# 四、
+class Student(object): 
+    def __init__(self, name, score):  # 和普通的函数相比，在类中定义的函数只有一点不同，就是第一个参数永远是实例变量self
+        self.name = name  # 通过定义一个特殊的__init__方法，在创建实例的时候，就把name，score等属性绑上去
+        self.score = score
+
+# 五、传入参数
+>>> bart = Student('Bart Simpson', 59)        # bart指向Student的实例，即self
+>>> bart.name         # bart即类的实例self
+'Bart Simpson'
+>>> bart.score
+59
+
+# 六、self的名称可更改
+
+class Test:
+    def prt(my_address):
+        print(my_adress)
+        print(my_adress._class_)
+t=Test()
+t.prt()
