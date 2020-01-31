@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d010c2a9-7fe7-4b10-afc7-1148b333b395" name="Default Changelist" comment="">
+    <list default="true" id="d010c2a9-7fe7-4b10-afc7-1148b333b395" name="Default Changelist" comment="Revert &quot;enter&quot;&#10;&#10;This reverts commit 8eae794b">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,9 +81,35 @@
       <option name="presentableId" value="Default" />
       <updated>1579664805779</updated>
     </task>
+    <task id="LOCAL-00001" summary="Revert &quot;enter&quot;&#10;&#10;This reverts commit 8eae794b">
+      <created>1580466789676</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1580466789676</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Revert &quot;enter&quot;&#10;&#10;This reverts commit 8eae794b" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;enter&quot;&#10;&#10;This reverts commit 8eae794b" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="311" y="0" key="CommitChangelistDialog2" timestamp="1580466811910">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="311" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1580466811910" />
     <state width="1515" height="213" key="GridCell.Tab.0.bottom" timestamp="1580297437638">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
