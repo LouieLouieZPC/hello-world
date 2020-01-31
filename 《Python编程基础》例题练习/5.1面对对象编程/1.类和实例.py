@@ -45,7 +45,7 @@ class 类名(object)：  PS：类名是首字母大写或驼峰式命名的；ob
 类名+()
 '''
 
->>> bart = Student()                # 变量bart指向Student的实例
+>>> bart = Student()                # 将Student类赋值给bart/变量bart指向Student的实例
 >>> bart
 <__main__.Student object at 0x10a67a590>       # 后面的0x10a67a590是内存地址，每个object的地址都不一样
 >>> Student
@@ -65,7 +65,7 @@ class Student(object):
         self.score = score
 
 # 五、传入参数
->>> bart = Student('Bart Simpson', 59)        # bart指向Student的实例，即self
+>>> bart = Student('Bart Simpson', 59)        # 将Student类赋值给bart/bart指向Student类的实例，即self
 >>> bart.name         # bart即类的实例self
 'Bart Simpson'
 >>> bart.score
