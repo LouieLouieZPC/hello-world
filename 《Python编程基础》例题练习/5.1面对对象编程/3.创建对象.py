@@ -1,6 +1,6 @@
 class Cat():
     '再次模拟猫咪的简单尝试'
-    def __init__(self,name,age):  # 用构造器初始化类的实例对象 
+    def __init__(self,name,age):  # 用构造器初始化类的实例对象,每当根据类创建新实例时，python都会自动运行_init_
         self.name=name            # 属性
         self.age=age              # 属性
     def sleep(self):
