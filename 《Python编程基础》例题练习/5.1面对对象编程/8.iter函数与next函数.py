@@ -1,4 +1,4 @@
-# 6.13 迭代器（iteration）的两个基本函数：it函数与next函数
+# 6.13 迭代器（iteration）的两个基本函数：iter函数与next函数
 >>> L=[1,2,3]
 >>> it=iter(L)        # 调用iter函数
 >>> it             
@@ -13,5 +13,3 @@
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 StopIteration        # 停止迭代
-
-# 
