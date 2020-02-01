@@ -49,9 +49,10 @@ class MyNumbers:
     self.a += 1         # 初始值为 1，逐步递增 1
     return x
  
-myclass = MyNumbers()
-myiter = iter(myclass)
-print(next(myiter))
+myclass = MyNumbers()   # 创建类的对象
+myiter = iter(myclass)  # 创建迭代器对象，变量=iter()
+
+print(next(myiter))     # 输出迭代器的下一个元素，next()
 print(next(myiter))
 print(next(myiter))
 print(next(myiter))
@@ -70,3 +71,25 @@ print(next(myiter))
 >>> print(next(myiter))
 5
 '''
+
+
+# 例三、
+# StopIteration 异常用于标识迭代的完成，防止出现无限循环的情况，在 __next__() 方法中我们可以设置在完成指定循环次数后触发 StopIteration 异常来结束迭代。
+class MyNumbers:
+  def __iter__(self):
+    self.a = 1
+    return self
+ 
+  def __next__(self):
+    if self.a <= 20:
+      x = self.a
+      self.a += 1
+      return x
+    else:
+      raise StopIteration
+ 
+myclass = MyNumbers()
+myiter = iter(myclass)
+ 
+for x in myiter:
+  print(x)
