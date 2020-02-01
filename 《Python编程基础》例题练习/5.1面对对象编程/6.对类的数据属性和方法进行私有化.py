@@ -36,7 +36,8 @@ print(cat2.eat('fish'))       # 只能通过设置好的接口函数来访问对
 print(cat1.getAttribute())    # 只能通过设置好的接口函数来访问对象
 # 结果为：('Tom',3)
 
-print(cat1._Cat_name)
-Tom
-print(cat1._Cat_age)
-3
+
+'''
+事实上想从外部访问这些私有数据属性也是可以的:
+name_mangling技术
+'''
