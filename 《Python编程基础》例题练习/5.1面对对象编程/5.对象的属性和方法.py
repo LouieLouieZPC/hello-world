@@ -8,8 +8,8 @@ class Cat():
     def eat(self,food):
         self.food=food
         print('%d岁的%s正在吃%s。'%(self.age,self.name,self.food))
-cat1=Cat('Tom',3)                 # 创建实例/对象cat1需要参数
-cat2=Cat('Jack',4)                # 创建实例/对象cat1需要参数
+cat1=Cat('Tom',3)                 # 创建实例/对象cat1需要输入参数
+cat2=Cat('Jack',4)                # 创建实例/对象cat1需要输入参数
 print('Cat1的名字为：',cat1.name)  # 调用函数
 print('Cat2的名字为：',cat2.name)  # 调用函数
 print(cat1.sleep())               # 访问对象的方法/函数sleep，记得加括号
@@ -26,12 +26,14 @@ None
 '''
 
 
-# 6.8对象方法的引进
+# 6.8对象方法的引用
+'''
+记得加括号,该加参数还是得加，程序还是隐性地加入了self参数的
+'''
 cat1=Cat('Tom',3)
-sleep=cat1.sleep      # 对象的方法/函数sleep的引用
+sleep=cat1.sleep      # 这是对对象的方法/函数sleep的引用
 print(sleep())        # 记得加括号
 
-cat1=Cat('Tom',3)
-eat=cat1.eat     # 对象的方法/函数eat的引用
-print(eat())     # 记得加括号
-
+cat2=Cat('Jack',4)
+eat=cat2.eat     # 这是对对象的方法/函数eat的引用
+print(eat('fish'))     # 记得加括号，注：eat函数是引用了cat2.eat()的，这意味着程序还是隐性地加入了self参数
