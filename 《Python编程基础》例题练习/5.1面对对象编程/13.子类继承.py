@@ -46,3 +46,8 @@ None
 '''
 
 
+
+# 6.18 子类不能继承父类的私有属性
+class animal():
+    def __init__(self,age):
+        self.__age=

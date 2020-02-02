@@ -84,7 +84,7 @@ t.prt()
 class Example:
     pass
 example=Example()         # bart指向Student的实例/对象，即self,self即实例本身
-dir(example)              # 用dir()函数，查看类的属性和方法，由于在定义里只有pass语句，所以结果都有下划线“_”开头结尾
+dir(example)              # 用dir()函数，查看类的属性和方法，由于在定义里只有pass语句，所以结果都有双下划线“_”开头结尾
 ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', 
 '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', 
 '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__',
