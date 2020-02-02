@@ -61,4 +61,15 @@ class Dog(Animal):
 
 a_animal=Animal(10)
 a_animal.print2()
-a_doge=Dog(10)
+a_doge=Dog(11)
+a_animal.print2()
+
+'''
+以上结果为：
+>>> a_animal=Animal(10)
+>>> a_animal.print2()
+10
+>>> a_doge=Dog(11)
+>>> a_animal.print2()
+10
+'''
