@@ -23,7 +23,7 @@ class Bosi(Cat):
         self.name=newName
     def eat(self):
         print(self.name,'--is eating')
-bs=Bosi()                                     # 创建子类的对象
+bs=Bosi()                                     # 创建子类的对象，调用了父类的__init__函数，并向父类传输数据
 print('bs的名字是：',bs.name)                  # 此父类的数据属性与方法还未私有化，以此可以访问。该子类继承了父类的属性和方法。访问对象的属性时，后面不用加括号
 print('bs的年龄为：',bs.age)                   # 访问父类属性
 print('bs的年龄为：',bs.getAge())              # 通过设置好的接口函数来访问类对象的属性
@@ -44,3 +44,5 @@ None
 猫
 4
 '''
+
+
