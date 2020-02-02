@@ -20,16 +20,3 @@ print(BMW.run())     # 调用对象的run函数/方法，访问对象的方法�
 del BMW              # 删除对象
 print(BMW)           # 查看对象是否被删除
 
-'''
-以上结果如下：
-<__main__.Car object at 0x0000020637721730>
-车的颜色为： red
-车轮子的数量为： 4
-车在跑，目标：夏威夷
-None
-Traceback (most recent call last):
-  File "d:/01.Software/GitHub/GitHub Repository/hello-world/《Python编程基础》例题练习/5.1面对对象编程/7.Task2（创建Car对象）.py", line 21, in <module>
-    print(BMW)           # 查看对象是否被删除
-NameError: name 'BMW' is not defined
-
-'''
