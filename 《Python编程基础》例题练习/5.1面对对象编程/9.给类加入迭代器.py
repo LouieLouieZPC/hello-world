@@ -8,7 +8,7 @@ class  Cat():
         self.name=name
         self.age=age
         self.info=[self.name,self.age]
-        self.index=-1
+        self.index=-1         # 为迭代设置初始变量
     def getName(self):        # 函数：通过设置好的接口函数来访问对象
         return self.name
     def getAge(self):         # 函数：通过设置好的接口函数来访问对象
