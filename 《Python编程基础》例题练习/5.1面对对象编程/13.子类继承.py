@@ -48,6 +48,17 @@ None
 
 
 # 6.18 子类不能继承父类的私有属性
-class animal():
+class Animal():
     def __init__(self,age):
-        self.__age=
+        self.__age=age
+    def print2(self):
+        print(self.__age)
+class Dog(Animal):
+    def __init__(self,age):
+        Animal.__init__(self,age)
+    def print2(self):
+        print(self.__age)
+
+a_animal=Animal(10)
+a_animal.print2()
+a_doge=Dog(10)
