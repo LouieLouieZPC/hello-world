@@ -17,7 +17,7 @@ class Car:
         return self.Color
     def getT(self):                                # 方法(函数)
         return self.T
-    def _iter_(self):                               # 方法(函数)
+    def _iter_(self):                               # 方法(函数)生成器
         print('品牌 车辆数 颜色 废气涡轮增压')
         return self
     def next(self):                                # 方法(函数)
