@@ -1,7 +1,7 @@
 # -*-coding:utf-8-*-
 
 class Car():
-    def __init__(self,newWheelNum,newColor,T):
+    def __init__(self,brand,newWheelNum,newColor,T):
         self.brand=brand
         self.wheelNum=newWheelNum
         self.color=newColor
@@ -24,3 +24,24 @@ class Car():
             raise StopIteration
         self.index+=1
         return self.info[self.index]
+class Land_Rover(Car):
+    def __init__(self,brand,newColor):
+        self.brand=brand
+        self.wheelNum=4
+        self.color=newColor
+        self.T=3
+        Car.__init__(self,self.brand,self.wheelNum,self.color,self.T)
+Luxury_car=Car('BMW',4,'red',2.4)
+print(Luxury_car.getNewcolor())
+iterator=iter(Luxury_car.next,1)
+for i in iterator:
+    print(i)
+
+'''
+以上结果为：
+None
+BMW
+4
+red
+2.4
+'''
