@@ -26,7 +26,7 @@ class Bosi(Cat):
 bs=Bosi()                                     # 创建子类的对象
 print('bs的名字是：',bs.name)                  # 此父类的数据属性与方法还未私有化，以此可以访问。该子类继承了父类的属性和方法。访问对象的属性时，后面不用加括号
 print('bs的年龄为：',bs.age)                   # 访问父类属性
-print('bs的年龄为：',bs.getAge())              # 
+print('bs的年龄为：',bs.getAge())              # 通过设置好的接口函数来访问类对象的属性
 print(bs.run())
 bs.setName('波斯猫')                           # 访问子类的属性和方法
 bs.eat()
