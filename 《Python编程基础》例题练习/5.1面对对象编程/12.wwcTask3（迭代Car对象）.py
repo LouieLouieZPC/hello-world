@@ -28,6 +28,6 @@ class Car:
 
 newcar=Car('BMW',4,'red',2.4)                  # 创建对象，输入参数
 print('车的颜色为：',newcar.Color)              # 此类的数据属性与方法还未私有化，以此可以访问。访问对象的属性时，后面不用加括号
-iterator=iter(newcar.next,1)
-for info in iterator:
+iterator=iter(newcar.next,1)                   # iter(object, sentinel)创建迭代器对象，调用迭代该函数输出对象的属性（如果传递了第二个参数，则object必须是一个可调用的对象（如，函数）。每次调用这个迭代器对象的__next__()方法时，都会调用object。）
+for info in iterator:                          # 迭代
     print(info)
