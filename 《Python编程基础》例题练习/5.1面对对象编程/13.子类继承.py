@@ -30,6 +30,17 @@ print('bs的年龄为：',bs.getAge())              # 通过设置好的接口�
 print(bs.run())
 bs.setName('波斯猫')                           # 访问子类的属性和方法，给参数
 bs.eat()
-iteration=iter(bs.next,1)                     # iter(object, sentinel)创建迭代器对象
+iteration=iter(bs.next,1)                     # iter(object, sentinel)创建迭代器对象，迭代输出父类的属性
 for info in iteration:                        # 遍历迭代器对象的同时每次都会调用next函数
     print(info)
+
+'''
+bs的名字是： 猫
+bs的年龄为： 4
+bs的年龄为： 4
+猫 --is runing
+None
+波斯猫 --is eating
+猫
+4
+'''

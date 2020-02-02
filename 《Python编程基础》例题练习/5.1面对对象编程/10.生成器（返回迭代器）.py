@@ -13,7 +13,7 @@ https://www.runoob.com/w3cnote/python-yield-used-analysis.html
 def fab(max): 
     n, a, b = 0, 0, 1 
     while n < max: 
-        yield b      # 使用 yield
+        yield b      # 使用 yield来代替print
         # print b 
         a, b = b, a + b 
         n = n + 1
