@@ -13,7 +13,7 @@ class Car():
     def getNewheelnum(self):
         return self.wheelNum
     def getNewcolor(self):
-        return
+        return self.color
     def getT(self):
         return self.T
     def __iter__(self):
@@ -39,7 +39,7 @@ for i in iterator:
 
 '''
 以上结果为：
-None
+red
 BMW
 4
 red
