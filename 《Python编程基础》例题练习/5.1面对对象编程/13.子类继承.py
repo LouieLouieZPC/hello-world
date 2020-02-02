@@ -1,5 +1,5 @@
 class Cat():
-    def __init__(self):                    # 初始化（子类不需要，只需一个）
+    def __init__(self):                    # 初始化
         self.name='猫'
         self.age=4
         self.info=[self.name,self.age]
