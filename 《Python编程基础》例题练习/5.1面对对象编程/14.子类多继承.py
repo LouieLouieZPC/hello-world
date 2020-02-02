@@ -20,7 +20,7 @@ class D(B,C):
         print('  <-Output D')
 d=D()
 print(issubclass(C,B))        # issubclass() 方法的语法:issubclass(class, classinfo).如果 class 是 classinfo 的子类返回 True，否则返回 False。
-print(issubclass(C,A))
+print(issubclass(C,A))        # 判断一个类是不是另一个类的子类  
 
 '''
 以上结果如上：
