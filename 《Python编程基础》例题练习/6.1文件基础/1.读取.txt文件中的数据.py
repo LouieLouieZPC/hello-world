@@ -123,9 +123,34 @@ print(txts)            # 输出
 以上结果如下：
 >>> print(type(txts))      # 查看类型
 <class 'list'>
->>> print(txts)            # 输出
+>>> print(txts)            # 单纯输出
 ['2.7182818284\n', '4904523536\n', '0287471352']
 '''
 
 
-# 7.15
+# 7.15 打印readlines函数存储的数据
+with open(r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\6.1文件基础\e_point.txt','r') as f:  # 打开
+    txts=f.readlines()      # 读取，将读取的一个文件存储到一个列表里
+for i in txts:
+    print(i.strip())
+
+'''
+以上结果如下：        # 迭代，而非一次性输出
+2.7182818284
+4904523536
+0287471352
+'''
+
+
+# readline函数，每次读取文件一行，将读取的一行内容存储到一个字符串变量里
+with open(r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\6.1文件基础\e_point.txt','r') as f:    # 打开
+    txt=f.readline()      # readline函数，读取一行
+print(type(txt))
+print(txt)
+'''
+以上结果如下：
+>>> print(type(txt))
+<class 'str'>
+>>> print(txt)
+2.7182818284
+'''
