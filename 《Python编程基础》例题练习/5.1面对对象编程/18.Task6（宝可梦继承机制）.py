@@ -1,5 +1,5 @@
 class Pokemon():
-    def __init__(self):      #初始化
+    def __init__(self):      #初始化      ,没用到参数，不用加
         self.name='小火龙'    #设置小火龙角色的属性
         self.gender='雄性'    #设置小火龙角色的属性
         self.level=0          #设置小火龙角色的属性
