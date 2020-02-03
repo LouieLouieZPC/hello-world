@@ -1,12 +1,17 @@
 '''
-1.打开,路径记得加r声明字符串不用转义 with open(r'','r/w/a/r+') as f:
+1.打开:
+路径记得加r声明字符串不用转义 with open(r'','r/w/a/r+') as f:
 try...finally...
 f.close()
 2.读取:
 x=f.read()字符串
 x=f.readline()字符串
 x=f.readlines()列表
-
+3.消除换行符:
+rstrip、lstrip、strip
+for循环语句下
+for i in x:
+    print(i.rstrip、lstrip、strip())
 
 '''
 
