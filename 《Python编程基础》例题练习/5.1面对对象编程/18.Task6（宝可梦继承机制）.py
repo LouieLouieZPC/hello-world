@@ -1,10 +1,10 @@
-class Charmander():
+class Pokemon():
     def __init__(self,name,gender,level,type,status):
         self.name=name
         self.gender=gender
         self.level=level
         self.type=type
-        self.status=status
+        self.status=[13,5,5,5,5,5]
         self.info=[self,self.name,self.type,self.gender,self.level,self.status]
         self.index=-1
     def getName(self):
@@ -28,8 +28,22 @@ class Charmander():
             raise StopIteration
         self.index+=1
         return self.info[self.index]
-pokemon1=Charmander('皮卡丘','雄性',0,'电',[10,5,5,5,5,5])
+
+class Charmander(Pokemon):
+    def __init__(self,status):
+        self.status=status
+        Pokemon.__init__(self,self.name,self.gender,self.level,self.type,self.status)
+pokemon1=Pokemon([10,5,5,5,5,5])
+print(pokemon1.status)
 iterator=iter(pokemon1.next,1)
 for i in iterator:
     print(i)
 
+'''
+以上结果如下：
+皮卡丘
+电
+雄性
+0
+[10, 5, 5, 5, 5, 5]
+'''
