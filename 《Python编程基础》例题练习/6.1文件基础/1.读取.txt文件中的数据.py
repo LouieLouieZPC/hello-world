@@ -114,8 +114,18 @@ print(txts)            # 输出
 0287471352
 '''
 
-# 7.14readlines函数
+# 7.14readlines函数，读取，将读取的一个文件存储到一个列表里
 with open(r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\6.1文件基础\e_point.txt','r') as f:  # 打开
-    txts=f.read()      # 读取，读取的内容存储道一个字符串变量中
+    txts=f.readlines()      # 读取，将读取的一个文件存储到一个列表里
 print(type(txts))      # 查看类型
 print(txts)            # 输出
+'''
+以上结果如下：
+>>> print(type(txts))      # 查看类型
+<class 'list'>
+>>> print(txts)            # 输出
+['2.7182818284\n', '4904523536\n', '0287471352']
+'''
+
+
+# 7.15
