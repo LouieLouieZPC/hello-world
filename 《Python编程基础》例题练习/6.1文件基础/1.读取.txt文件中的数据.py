@@ -1,5 +1,14 @@
-# 打开,路径记得加r声明字符串不用转义
-# 读取
+'''
+1.打开,路径记得加r声明字符串不用转义 with open(r'','r/w/a/r+') as f:
+try...finally...
+f.close()
+2.读取:
+x=f.read()字符串
+x=f.readline()字符串
+x=f.readlines()列表
+
+
+'''
 
 # 7.3打开并读取文件
 f=open(r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\6.1文件基础\e_point.txt','r')     # 只读文件，读取模式通过绝对路径打开文件并定义变量f
