@@ -33,11 +33,3 @@ iterator=iter(pokemon1.next,1)
 for i in iterator:
     print(i)
 
-'''
-以上结果如下：
-皮卡丘
-电
-雄性
-0
-[10, 5, 5, 5, 5, 5]
-'''
