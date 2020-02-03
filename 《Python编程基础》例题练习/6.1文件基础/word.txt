@@ -1,0 +1,4 @@
+hello,world!
+i love python!
+what's your favorite language?
+my favorite language is python too!
