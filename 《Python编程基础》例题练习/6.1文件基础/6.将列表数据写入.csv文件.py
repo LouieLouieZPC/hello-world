@@ -12,7 +12,3 @@ file_name=r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程�
 with open(file_name,'w',newline='') as f:       # 打开，写入
     write_csv=csv.writer(f)           # 使用csv.writer函数（接收一个可迭代的对象，例.csv文件）
     write_csv.writerow(iris)          # 使用csv.writerrow函数将列表数据逐行写入列表
-
-
-
-
