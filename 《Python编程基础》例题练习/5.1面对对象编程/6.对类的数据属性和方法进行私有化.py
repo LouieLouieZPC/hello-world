@@ -9,8 +9,6 @@ Jack
 只需在在属性或方法名字前加双下划线即可‘_’
 '''
 
-
-
 class Cat():
     def __init__(self,name,age):
         self._name=name
