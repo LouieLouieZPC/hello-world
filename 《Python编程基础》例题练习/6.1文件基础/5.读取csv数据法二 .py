@@ -1,3 +1,17 @@
+'''
+法二：'r'
+以键值行为单位将读取的所有行存储在字典中
+csv.DictReader函数(可迭代对象)
+列表解析式
+'r'
+以某一列为单位将读取的所有列存储在列表中
+n=csv.DictReader函数(可迭代对象)
+x=列表解析式[i['某列标题'] for i in n]
+
+
+'''
+
+
 import csv     # 调用csv模块
 file_name=r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\6.1文件基础\iris.csv'
 with open(file_name,'r') as f:       # 打开，只读

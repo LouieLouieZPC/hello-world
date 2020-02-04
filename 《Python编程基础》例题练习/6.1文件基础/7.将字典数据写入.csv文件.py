@@ -1,4 +1,13 @@
+'''
+将字典数据写入文件：
 
+准备好一个键的列表
+打开，'w',newline=''
+x=csv.DictWriter(可迭代对象,键的列表)
+x.writeheader()
+x.writerows(列表数据)
+
+'''
 import csv
 file_name=r'\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\6.1文件基础\iris.csv'
 with open(file_name,'r') as f:

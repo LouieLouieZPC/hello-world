@@ -1,3 +1,12 @@
+'''
+'r'
+将列表数据逐行写入csv文件：
+打开，'w',newline=''
+x=csv.writer(可迭代对象)
+x.writerow(列表数据)
+'''
+
+
 import csv              # 调用csv模块
 file_name=r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\6.1文件基础\iris.csv'
 with open(file_name,'r') as f:       # 打开，只读
