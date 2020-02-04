@@ -10,8 +10,8 @@ class Cat():
         print('%d岁的%s正在吃%s。'%(self.age,self.name,self.food))
 cat1=Cat('Tom',3)                 # 创建实例/对象cat1需要输入参数
 cat2=Cat('Jack',4)                # 创建实例/对象cat1需要输入参数
-print('Cat1的名字为：',cat1.name)  # 调用函数
-print('Cat2的名字为：',cat2.name)  # 调用函数
+print('Cat1的名字为：',cat1.name)  # 直接查看属性
+print('Cat2的名字为：',cat2.name)  # 直接查看属性
 print(cat1.sleep())               # 访问对象的方法/函数sleep，记得加括号
 print(cat2.eat('fish'))           # 访问对象的方法/函数eat，记得加括号
 
