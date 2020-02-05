@@ -65,10 +65,10 @@ else:
 
 name='README.md'
 print('本程序的大小为：',os.path.getsize(name))
-name=os.path.abspath(name)
+name=os.path.abspath(name)                             # 获取文件的绝对路径
 print('本程序的绝对路径为：',name)
-print('本程序的路径和文件名分别为：',os.path.split(name))
-files=os.path.splitext(name)
+print('本程序的路径和文件名分别为：',os.path.split(name)) # 将文件名和路径分开
+files=os.path.splitext(name)                           # 将文件名与扩展名分开
 print('本程序的扩展名为：',files[1])
-print('本程序的文件名为：',os.path.basename(name))
-print('本程序的路径为：',os.path.dirname(name))
+print('本程序的文件名为：',os.path.basename(name))       # 获取文件的名字
+print('本程序的路径为：',os.path.dirname(name))          # 获取文件的路径
