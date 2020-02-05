@@ -1,3 +1,18 @@
+'''
+os.name         # 获取当前操作系统
+os.sep          # 查询文件路径的分隔符
+os.linesep      # 查询当前系统使用的行终止符
+os.getcwd()     # 查询当前工作路径
+os.listdir()    # 查询当前目录下的文件
+
+os.remove()     # 删除文件
+os.mkdir()      # 创建文件夹（该文件夹事先不存在）
+os.rmdir()      # 删除文件夹（该文件夹为空）
+
+'''
+
+
+
 # 查询操作系统
 >>> import os       # 导入模块
 >>> os.name         # 获取当前操作系统
@@ -25,7 +40,7 @@ os.listdir(r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程
 
 # 删除文件
 import os
-os.remove(r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\6.1文件基础\text.csv')
+os.remove(r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\6.1文件基础\text.csv')  # 删除文件
 
 # 创建与删除目录
 import os
