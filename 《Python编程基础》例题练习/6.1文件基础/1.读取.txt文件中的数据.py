@@ -4,9 +4,9 @@
 try...finally...
 f.close()
 2.读取:
-x=f.read()字符串
-x=f.readline()字符串
-x=f.readlines()列表
+x=f.read()字符串，读取整个文件内容，存储到一个字符串变量中
+x=f.readline()字符串，读取，将读取的一个文件存储到一个列表里
+x=f.readlines()列表，每次读取文件一行，将读取的一行内容存储到一个字符串变量里
 3.消除换行符:
 rstrip、lstrip、strip
 for循环语句下
@@ -115,7 +115,7 @@ with open(file_name,'r') as f:
 
 # 7.13read函数，读取，读取的内容存储道一个字符串变量中
 with open(r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\6.1文件基础\e_point.txt','r') as f:  # 打开
-    txts=f.read()      # 读取，读取的内容存储道一个字符串变量中
+    txts=f.read()      # 读取，读取整个文件内容，存储到一个字符串变量中
 print(type(txts))      # 查看类型
 print(txts)            # 输出
 '''
