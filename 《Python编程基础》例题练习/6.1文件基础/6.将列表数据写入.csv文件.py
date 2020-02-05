@@ -2,7 +2,7 @@
 将列表数据逐行写入csv文件：
 打开，'w',newline=''             # newline=''是选择空行的意思
 x=csv.writer(可迭代对象)
-x.writerow(列表数据)
+x.writerow(列表数据)    将列表数据逐行写入列表
 '''
 
 

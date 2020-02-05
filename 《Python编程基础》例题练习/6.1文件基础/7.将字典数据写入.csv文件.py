@@ -4,8 +4,8 @@
 准备好一个键的列表
 打开，'w',newline=''
 x=csv.DictWriter(可迭代对象,键的列表)
-x.writeheader()
-x.writerows(列表数据)
+x.writeheader()        # 用csv.writerheader函数输入标题
+x.writerows(列表数据)   # 将列表数据写入列表,writerow需要一个可迭代的单元格来编写
 
 '''
 import csv
@@ -22,4 +22,4 @@ for i in isir1[1].keys():      # 获取第一个字典内的所有键
 with open(file_name,'w',newline='') as f:       # 打开，写入
     write_csv=csv.DictWriter(f,my_key)           # 使用csv.Dictwriter函数（接收一个可迭代的对象，例.csv文件，输入字典所有键的数据）
     write_csv.writeheader()                      # 使用csv.writerheader函数输入标题
-    write_csv.writerows(isir1)                        # 使用csv.writerrows函数将列表数据写入列表,writerow需要一个可迭代的单元格来编写，writerows使用可迭代的单元格迭代来编写
+    write_csv.writerows(isir1)                        # 使用csv.writerrows函数将列表数据写入列表,writerow需要一个可迭代的单元格来编写
