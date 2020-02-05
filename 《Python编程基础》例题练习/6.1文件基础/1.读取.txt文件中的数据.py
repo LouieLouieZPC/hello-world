@@ -1,6 +1,6 @@
 '''
 1.打开:
-路径记得加r声明字符串不用转义 with open(r'','r/w/a/r+') as f:
+路径记得加r声明字符串不用转义 with open(r'','r(只读)/w（写入）/a（附加）/r+（读取和写入文件）') as f:
 try...finally...
 f.close()
 2.读取:
