@@ -48,17 +48,17 @@ print('运行本程序所在目录的是：',path)
 
 print('计算机的path环境变量如下所示：\n',os.getenv('path'))
 
-os.mkdir('test')
-print('当前文件夹中的文件有：\n',os.listdir(path))
-if(os.path.exists('test')):
-    os.rmdir('test')
+os.mkdir('test')                                     # 创建空文件夹
+print('当前文件夹中的文件有：\n',os.listdir(path))     # 获取文件夹中的所有文件
+if(os.path.exists('test')):                          # 判断文件是否存在
+    os.rmdir('test')                                 # 删除指定文件
     print('删除文件夹')
 else:
     print('文件夹不存在')
 print('删除后的文件夹中的文件有：\n',os.listdir(path))
 
 filepath1='python7'
-if (os.path.isfile(filepath1)):
+if (os.path.isfile(filepath1)):                        # 判断是不是文件
     print(filepath1,'是一个文件')
 else:
     print(filepath1,'不是一个文件')
