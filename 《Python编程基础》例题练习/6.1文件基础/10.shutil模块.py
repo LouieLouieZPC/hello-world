@@ -32,4 +32,16 @@ import shutil
 shutil.copytree(r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\6.1文件基础',
 r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\7.1Test目录')
 
+
+
+'''
+1.os.unlink()/os.remove()删除文件
+2.os.rmdir()删除一个空目录
+3.shutil.rmtree()删除一个目录及其所有内容
+'''
+import os
+import shutil
+os.unlink(r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\6.1文件基础\test2')
+os.rmdir(r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\6.1文件基础\test')
+shutil.rmtree(r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\7.1Test目录')
 # 
