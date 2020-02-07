@@ -21,4 +21,11 @@ def my_ads(x):
         return x
     else:
         return -x
-my_ads()
+my_ads('a')
+'''
+以上结果如下：
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 3, in my_ads
+TypeError: Bad operand type
+'''
