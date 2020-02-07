@@ -1,3 +1,11 @@
+'''
+函数体内部的语句在执行时，一旦执行到return时，函数就执行完毕，并将结果返回
+如果没有return语句，函数执行完毕后也会返回结果，只是结果为None。return None可以简写为return
+
+'''
+
+
+
 #5.1 函数定义
 >>> def my_function(parameter):        # del关键词（即definition） 函数名（形参）:
 ...  '打印任何传入的字符串'
