@@ -7,7 +7,8 @@
 
 数据类型检查可以用内置函数isinstance()实现
 isinstance(object, classinfo)
-object -- 实例对象。
+object -- 实例对象（一次只能有一个）。# 解决方法是if isinstance(...) and isinstance(...) and isinstance(...):
+例如：if not isinstance(a,(int,float)) and not isinstance(b,(int,float)) and not isinstance(c,(int,float)):
 classinfo -- 可以是直接或间接类名、基本类型或者由它们组成的元组。
 如果对象的类型与参数二的类型（classinfo）相同则返回 True，否则返回 False
 '''
