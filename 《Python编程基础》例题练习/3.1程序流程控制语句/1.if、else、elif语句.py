@@ -11,3 +11,11 @@ elif score>=60 and score<70:
     print('本次考试，成绩等级为：D')
 else:
     print('本次考试，成绩等级为：E')
+
+
+
+if判断条件还可以简写，比如写：
+
+if x:
+    print('True')
+只要x是非零数值、非空字符串、非空list等，就判断为True，否则为False。
