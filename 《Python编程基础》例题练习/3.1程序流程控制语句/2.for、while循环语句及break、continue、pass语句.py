@@ -1,10 +1,9 @@
 '''
-for是个秩序迭代器，用于遍历有序序列，包括字符串、列表、元组等
+for是个秩序迭代器，用于遍历可迭代对象，包括字符串、列表、元组、字典等
 所以for x in ...循环就是把每个元素代入变量x，然后执行缩进块的语句。
 break语句可以在循环过程中直接退出循环，而continue语句可以提前结束本轮循环，并直接开始下一轮循环。
 这两个语句通常都必须配合if语句使用。
 pass可以用来作为占位符，比如现在还没想好怎么写函数的代码，就可以先放一个pass，让代码能运行起来。
-
 
 
 '''
@@ -29,6 +28,40 @@ r
 i
 n
 g
+
+
+# for循环其实可以同时使用两个甚至多个变量，比如dict的items()可以同时迭代key和value：
+>>> d = {'x': 'A', 'y': 'B', 'z': 'C' }
+>>> for k, v in d.items():
+...     print(k, '=', v)
+...
+y = B
+x = A
+z = C
+
+
+
+
+
+'''
+判断一个对象是可迭代对象呢:
+方法是通过collections模块的Iterable类型判断
+'''
+>>> from collections import Iterable
+>>> isinstance('abc', Iterable) # str是否可迭代
+True
+>>> isinstance([1,2,3], Iterable) # list是否可迭代
+True
+>>> isinstance(123, Iterable) # 整数是否可迭代
+False
+
+
+
+
+
+
+
+
 
 #4.4  while循环计数
 >>> s=0

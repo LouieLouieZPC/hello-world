@@ -46,3 +46,69 @@ Python 解释器会将其视为一个 generator，调用 fab(5) 不会执行 fab
 Traceback (most recent call last): 
  File "<stdin>", line 1, in <module> 
 StopIteration
+
+
+
+
+
+
+
+'''
+创建一个generator
+法一：把一个列表生成式的[]改成()，就创建了一个generator：
+创建L和g的区别仅在于最外层的[]和()，L是一个list，而g是一个generator。
+'''
+>>> L = [x * x for x in range(10)]
+>>> L
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+>>> g = (x * x for x in range(10))
+>>> g
+<generator object <genexpr> at 0x1022ef630>
+
+
+'''
+法一一：如果要一个一个打印出来，可以通过next()函数获得generator的下一个返回值：
+'''
+>>> next(g)
+0
+>>> next(g)
+1
+>>> next(g)
+4
+>>> next(g)
+9
+>>> next(g)
+16
+>>> next(g)
+25
+>>> next(g)
+36
+>>> next(g)
+49
+>>> next(g)
+64
+>>> next(g)
+81
+>>> next(g)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+StopIteration
+
+'''
+法一二：
+使用for循环，因为generator也是可迭代对象：
+'''
+>>> g = (x * x for x in range(10))
+>>> for n in g:
+...     print(n)
+... 
+0
+1
+4
+9
+16
+25
+36
+49
+64
+81
