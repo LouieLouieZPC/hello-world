@@ -63,7 +63,7 @@ StopIteration
 [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 >>> g = (x * x for x in range(10))
 >>> g
-<generator object <genexpr> at 0x1022ef630>
+<generator object <genexpr> at 0x1022ef630>   # 普通函数调用直接返回结果;generator函数的“调用”实际返回一个generator对象
 
 
 '''
