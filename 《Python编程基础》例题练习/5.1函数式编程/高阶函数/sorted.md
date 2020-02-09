@@ -26,3 +26,16 @@ sorted(iterable, key=None, reverse=False)
 > >>> sorted(['bob', 'about', 'Zoo', 'Credit'], key=str.lower, reverse=True)
 > ['Zoo', 'Credit', 'bob', 'about']
 > ```
+
+
+
+**e.g.3:**  
+对列表里的元组分别按名字排序：
+
+
+> ```python
+> L=[('Bob', 75), ('Adam', 92), ('Bart', 66), ('Lisa', 88)]
+> L2 = sorted(L, key=lambda L:L[0])    # key是对list里的元素来说的,key=lambda L:L[0]中的L其实是('Bob', 75)
+> print(L2)
+> [('Adam', 92), ('Bart', 66), ('Bob', 75), ('Lisa', 88)]
+> ```
