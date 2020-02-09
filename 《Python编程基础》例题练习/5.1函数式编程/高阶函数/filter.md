@@ -12,17 +12,26 @@ filter(function, iterable)  (起'筛选'作用)(常搭配list()函数使用)
 
 
 **e.g.1:**  
-由于结果是一个`Iterator`，Iterator是惰性序列，因此通过`list()`函数让它把整个序列都计算出来并返回一个`list`:
+过滤出列表中的所有奇数：
 ```python
-def f(x):
-    return x*x
-print(list(map(f,range(1,10))))
+#!/usr/bin/python3
+ 
+def is_odd(n):
+    return n % 2 == 1
+ 
+tmplist = filter(is_odd, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+newlist = list(tmplist)
+print(newlist)
 ```
 
 **e.g.2:**  
-map()作为高阶函数,可以计算任意复杂的函数，比如，把这个list所有数字转为字符串：
+回数是指从左向右读和从右向左读都是一样的数，例如12321，909。请利用filter()筛选出回数：
 
 ```python
->>> list(map(str, [1, 2, 3, 4, 5, 6, 7, 8, 9]))
-['1', '2', '3', '4', '5', '6', '7', '8', '9']
+def is_palindrome(x):
+    x=str(x)
+    return x==x[::-1]
+
+output = filter(is_palindrome, range(1, 1000))
+print('1~1000:', list(output))
 ```
