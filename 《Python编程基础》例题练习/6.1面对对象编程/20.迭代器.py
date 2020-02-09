@@ -4,7 +4,7 @@
 
 一类是集合数据类型，如list、tuple、dict、set、str等；(数字型数据不行)
 
-一类是generator（生成器），包括生成器和带yield的generator function(生成器功能)。
+一类是generator（生成器），包括生成器和带yield的generator function(生成器函数)。
 '''
 
 '''
