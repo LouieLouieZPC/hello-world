@@ -1,2 +1,10 @@
-L=[i*i for i in range(1,11)]
-print([s.lower() for s in L])
+from functools import reduce
+DIGITS = {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9}
+
+def char2num(s):
+    return DIGITS[s]
+
+def str2int(s):
+    return reduce(lambda x, y: x * 10 + y, map(char2num, s))  # s这个位置参数放字符串
+
+print(str2int('12345'))
