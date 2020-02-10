@@ -1,44 +1,33 @@
-from functools import wraps
+import functools
+def log01(text=None):   # 默认参数为None
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kw):
+            if text is not None:
+                print('%s begin call %s()' % (text, func.__name__))
+                fu = func(*args, **kw)
+                print('%s end call %s()' % (text, func.__name__))
+            else:
+                print('begin call %s()' % func.__name__)
+                fu = func(*args, **kw)
+                print('end call %s()' % func.__name__)
+            return fu
 
-def log(func1):    # 此为高阶函数
-    if isinstance(func1,str):   # 若高阶函数传入的参数是字符串，则可用isinstance判断
-        def decorator(func2):   # 声明一个装饰器函数
-            @wraps(func2)
-            def wrapper(*args,**kw):
-                print('%s begin call %s'%(func1,func2.__name__))
-                func2(*args,**kw)
-                print('%s end call %s'%(func1,func2.__name__))
-                return func2(*args,**kw)
-            return wrapper
-        return decorator   # 第一种情况，这是一个返回decorator（装饰器）的高阶函数
-    else:
-        @wraps(func1)
-        def wrapper(*args,**kw):  # 第二种情况，无需声明再装饰器函数，该高阶函数即为装饰器函数
-            print('begin call %s'%func1.__name__)
-            func1(*args,**kw)
-            print('end call %s'%func1.__name__)
-            return func1(*args,**kw)
         return wrapper
 
-
-@log
-def f():
-    pass
-
-f()
-# Output:
-begin call f
-end call f
+    return decorator
 
 
+@log01()  # 这种方法必须加(), 不能直接写@log01
+def test1(n):
+    print('这里是%sexecuted log测试' % n)
 
 
+@log01('executed')  # 给log函数传入字符串类型的参数'execute'，再给它传入函数类型的参数f()
+def test2(n):
+    print('这里是%sexecuted log测试' % n)
 
-@log('execute')    # 先给log函数传入字符串类型的参数'execute'，再给它传入函数类型的参数f()
-def x():
-    pass
 
-x()
-# Output:
-execute begin call x
-execute end call x
+# 结果检验
+test1('无')
+test2('有')
