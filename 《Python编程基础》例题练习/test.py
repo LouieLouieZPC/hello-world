@@ -1,15 +1,15 @@
-from functools import wraps
-def log(text):
-    def decorator(func):
-        @wraps(func)
-        def wrapper(*args,**kw):
-            print('%s %s():'%(text,func.__name__))
-            return func(*args,**kw)
-        return wrapper
-    return decorator
+from functools import wraps()
+class Foo(object):
+    def __init__(self, func):
+        self._func = func
 
-@log('execute')
-def now():
-    print('2020.2.10')
+    def __call__(self):
+        print ('class decorator runing')
+        self._func()
+        print ('class decorator ending')
 
-now()
+@Foo
+def bar():
+    print ('bar')
+
+bar()
