@@ -26,10 +26,19 @@ def f():
     pass
 
 f()
+# Output:
+begin call f
+end call f
+
+
+
+
 
 @log('execute')    # 先给log函数传入字符串类型的参数'execute'，再给它传入函数类型的参数f()
 def x():
     pass
 
-
 x()
+# Output:
+execute begin call x
+execute end call x
