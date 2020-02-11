@@ -13,12 +13,12 @@ class Cat():
     def __init__(self,name,age):      # __init__是特殊变量，特殊变量是可以直接访问的,不是private变量
         self._name=name
         self._age=age
-    def sleep(self):
-        print('%d岁的%s正在沙发上睡懒觉。'%(self._age,self._name))
-    def eat(self,food):
+    def sleep(self):           # 设置接口函数，封装
+        print('%d岁的%s正在沙发上睡懒觉。'%(self._age,self._name))  
+    def eat(self,food):        # 设置接口函数，封装
         self._food=food
         print('%d岁的%s正在吃%s。'%(self._age,self._name,self._food))
-    def getAttribute(self):
+    def getAttribute(self):    # 设置接口函数，封装
         return self._name,self._age
 cat1=Cat('Tom',3)      # 创建对象，输入参数
 cat2=Cat('Jack',4)     # 创建对象，输入参数
