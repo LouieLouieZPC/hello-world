@@ -27,6 +27,8 @@ def test1(n):
 def test2(n):
     print('这里是%sexecuted log测试' % n)
 
+test1(1)
+test2(2)
 
 # 结果检验
 begin call test1()
