@@ -47,3 +47,35 @@ name_mangling技术
 面向对象编程的一个重要特点就是数据封装。
 既然Cat实例本身就拥有这些数据，要访问这些数据，就没有必要从外面的函数去访问，可以直接在Cat类的内部定义访问数据的函数，
 这样，就把“数据”给封装起来了。这些封装数据的函数是Cat类本身是关联起来的，我们称之为类的方法
+
+
+
+
+
+
+**************************************************************************************
+Task:
+
+class Student(object):
+    def __init__(self,name,gender):
+        self.name=name
+        self.__gender=gender
+    def get_gender(self):
+        return self.__gender
+    def set_gender(self,new_gender):
+        if (new_gender !='male') and (new_gender !='female'):
+            raise ValueError('bad gender!!!Are you human?')
+        else:
+            self.__gender=new_gender
+
+
+# 测试:
+bart = Student('Bart', 'male')
+if bart.get_gender() != 'male':
+    print('测试失败!')
+else:
+    bart.set_gender('female')
+    if bart.get_gender() != 'female':
+        print('测试失败!')
+    else:
+        print('测试成功!')
