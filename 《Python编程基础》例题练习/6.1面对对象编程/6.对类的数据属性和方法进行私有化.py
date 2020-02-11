@@ -10,7 +10,7 @@ Jack
 '''
 
 class Cat():
-    def __init__(self,name,age):
+    def __init__(self,name,age):      # __init__是特殊变量，特殊变量是可以直接访问的,不是private变量
         self._name=name
         self._age=age
     def sleep(self):
