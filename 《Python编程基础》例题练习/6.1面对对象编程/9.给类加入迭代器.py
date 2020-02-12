@@ -15,7 +15,7 @@ class  Cat():
         return self.age
     def _iter_(self):         # 加入迭代器
         print('名字 年龄')
-        return self           # __iter__() 方法返回一个特殊的迭代器对象
+        return self           # __iter__() 方法返回一个特殊的迭代器对象,实例本身就是迭代对象，故返回自己
     def next(self):
         if self.index==len(self.info)-1:
             raise StopAsyncIteration
