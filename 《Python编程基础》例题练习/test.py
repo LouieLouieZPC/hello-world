@@ -1,25 +1,16 @@
+from types import MethodType
+
 class Student(object):
-    count = 0
+    __slots__=('name','age')
 
-    def __init__(self, name):
-        self.name = name
-        Student.count+=1
-
-
-
+def set_age(self,age):
+    self.age = age
+def set_score(self,score):
+    self.score = score
 
 
-# 测试:
-if Student.count != 0:
-    print('测试失败!')
-else:
-    bart = Student('Bart')
-    if Student.count != 1:
-        print('测试失败!')
-    else:
-        lisa = Student('Bart')
-        if Student.count != 2:
-            print('测试失败!')
-        else:
-            print('Students:', Student.count)
-            print('测试通过!')
+
+s=Student()
+s.gender='male'
+print(s.gender)
+
