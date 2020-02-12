@@ -1,25 +1,25 @@
 class Screen(object):
-    
+  
     @property
-    def width(self):        # 这个负责返回
+    def width(self):
         return self.awidth
+
     @width.setter
-    def width(self,value):  # 这个负责设条件
-        self.awidth=value
+    def width(self, width):
+        self .awidth = width
 
     @property
-    def height(self):        # 这个负责返回
+    def height(self):
         return self.aheight
+
     @height.setter
-    def height(self,value):  # 这个负责设条件
-        self.aheight=value
+    def height(self, height):
+        self.aheight = height
 
     @property
     def resolution(self):
-        return self.aheight*self.awidth
-        
+        return self.awidth * self.aheight
 
-# 测试:
 s = Screen()
 s.width = 1024
 s.height = 768
