@@ -89,7 +89,8 @@ class MyNumbers:
       raise StopIteration    # 在 20 次迭代后停止执行
  
 myclass = MyNumbers()        # 创建类的对象
-myiter = iter(myclass)       # 创建迭代器对象，变量=iter(类的对象)
+myiter = iter(myclass)       # 规范写法：创建迭代器对象，变量=iter(类的对象)。但其实也可以不用这一列，然后直接迭代类的对象for x in myclass:  print(x,end=',')
+
  
 for x in myiter:
   print(x,end=',')
