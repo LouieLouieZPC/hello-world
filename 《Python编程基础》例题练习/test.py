@@ -1,9 +1,12 @@
-class Student(object):
-    def __init__(self,name):
-        self.name=name
-    def __str__(self):   # 把一个类当作
-        return 'Student object (name:%s)'%self.name
+class Test(object):
+    def __init__(self, value='hello, world!'):
+        self.data = value
+    def __str__(self):
+        return '[Value: %s]' % self.data
     __repr__=__str__
+    
 
-s=Student('Yeats')
-print(s)
+ts =Test()
+ts
+
+print ts
