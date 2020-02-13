@@ -9,5 +9,10 @@ class MyNumbers:
     return x
  
 myclass = MyNumbers()   # 创建类的对象
-for i in myclass:
-    print(i)
+myiter = iter(myclass)  # 创建迭代器对象，变量=iter(类的对象)
+
+print(next(myiter))     # 输出迭代器的下一个元素，next()
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))

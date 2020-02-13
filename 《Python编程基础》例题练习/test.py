@@ -1,17 +1,26 @@
-class MyNumbers:
-  def __iter__(self):
-    self.a = 1
-    return self
- 
-  def __next__(self):
-    if self.a <= 20:
-      x = self.a
-      self.a += 1
-      return x
-    else:
-      raise StopIteration    # 在 20 次迭代后停止执行
- 
-myclass = MyNumbers()        # 创建类的对象
- 
-for x in myclass:
-  print(x)
+class Fib(object):
+    def __getitem__(self, n):
+        if isinstance(n, int): # n是索引
+            a, b = 1, 1
+            for x in range(n):
+                a, b = b, a + b
+            return a
+        if isinstance(n, slice): # n是切片,slice
+            start = n.start
+            stop = n.stop
+            if start is None:
+                start = 0
+            a, b = 1, 1
+            L = []
+            for x in range(stop):
+                if x >= start:
+                    L.append(a)
+                a, b = b, a + b
+            return L
+>>> f = Fib()     # 创建类对象
+>>> f[3]
+3
+>>> f[0:5]        # 对类对象切片
+[1, 1, 2, 3, 5]
+>>> f[:10]
+[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
