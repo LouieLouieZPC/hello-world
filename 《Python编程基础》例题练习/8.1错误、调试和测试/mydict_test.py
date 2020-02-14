@@ -1,3 +1,7 @@
+import unittest   # 引入Python自带的unittest模块
+
+from mydict import Dict
+
 class TestDict(unittest.TestCase):   # 编写单元测试时，我们需要编写一个测试类，从unittest.TestCase继承
     '''此为测试模块mydict_test.py代码'''
 
@@ -27,6 +31,3 @@ class TestDict(unittest.TestCase):   # 编写单元测试时，我们需要编�
         d = Dict()
         with self.assertRaises(AttributeError):
             value = d.empty
-
-    if __name__ == '__main__':  
-        unittest.main()     # 当做正常的python脚本运行单元测试
