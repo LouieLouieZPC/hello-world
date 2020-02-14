@@ -1,7 +1,10 @@
 from functools import reduce
 
 def str2num(s):
-    return int(s)
+    try:
+        return int(s)
+    except:
+        return float(s)
 
 def calc(exp):
     ss = exp.split('+')
