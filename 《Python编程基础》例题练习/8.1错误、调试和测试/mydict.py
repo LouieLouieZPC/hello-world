@@ -1,5 +1,5 @@
 class Dict(dict):
-    '''此为测试用例mydict.py代码'''
+
     def __init__(self, **kw):
         super().__init__(**kw)
 
