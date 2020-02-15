@@ -1,8 +1,8 @@
 import unittest   # 引入Python自带的unittest模块
 
-from mydict import Dict
+from mydict import Dict    # 导入模块中的类
 
-class TestDict(unittest.TestCase):   # 编写单元测试时，我们需要编写一个测试类，从unittest.TestCase继承
+class TestDict(unittest.TestCase):   # 编写单元测试,编写一个测试类，从unittest.TestCase继承
     '''此为测试模块mydict_test.py代码'''
 
     def test_init(self):   #以test开头的方法就是测试方法，不以test开头的方法不被认为是测试方法，测试的时候不会被执行
@@ -21,7 +21,7 @@ class TestDict(unittest.TestCase):   # 编写单元测试时，我们需要编�
         d.key = 'value'
         self.assertTrue('key' in d)
         self.assertEqual(d['key'], 'value')
-
+    
     def test_keyerror(self):
         d = Dict()                        # 创建实例
         with self.assertRaises(KeyError):
