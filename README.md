@@ -1,6 +1,6 @@
 
 
-大学生一枚，Python新手：
+# Python编程基础：
 
 
 ### 参考书目：  
@@ -9,11 +9,15 @@
 ### 参考网页：  
 1. [廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/1016959663602400)
 2. [Python3 教程|菜鸟教程](https://www.runoob.com/python3/python3-tutorial.html)
-3. 
+3. [docs.python.org](https://docs.python.org/zh-cn/3.7/)
+
+### 工具：
+1. [Anaconda3](https://www.anaconda.com/distribution/)
+2. [Visual Studio Code](https://code.visualstudio.com/)
+3. [PyCharm](https://www.jetbrains.com/pycharm/download/)
 
 
-
-下附Python之禅：
+### 下附Python之禅：
 
 ```python
 >>> import this
