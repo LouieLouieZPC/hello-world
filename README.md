@@ -1,3 +1,20 @@
+
+
+大学生一枚，Python新手：
+
+
+### 参考书目：  
+1. 《Python编程基础》/张健，张良均主编————北京：人民    
+2. 《流畅的Python》/[巴西] Luciano Ramalho————人民邮电出版社
+### 参考网页：  
+1. [廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/1016959663602400)
+2. [Python3 教程|菜鸟教程](https://www.runoob.com/python3/python3-tutorial.html)
+3. 
+
+
+
+下附Python之禅：
+
 ```python
 >>> import this
 The Zen of Python, by Tim Peters
