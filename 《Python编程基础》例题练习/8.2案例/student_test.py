@@ -1,5 +1,6 @@
 # -*-coding:utf-8-*-
 import unittest
+from student import Student
 
 class TestStudent(unittest.TestCase):
     def test_80_to_100(self):
