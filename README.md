@@ -158,38 +158,29 @@ Python编程基础
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## 二、参考书目：  
 1. 《Python编程基础》/张健，张良均主编——北京：人民邮电出版社   
 2. 《流畅的Python》/译者: 安道/作者：[巴西] Luciano Ramalho——人民邮电出版社
+
+
+
 ## 三、参考网页：  
 1. [廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/1016959663602400)
 2. [Python3 教程|菜鸟教程](https://www.runoob.com/python3/python3-tutorial.html)
 3. [docs.python.org](https://docs.python.org/zh-cn/3.7/)
 
+
+
+
+
 ## 四、工具：
 1. [Anaconda3](https://www.anaconda.com/distribution/)
 2. [Visual Studio Code](https://code.visualstudio.com/)
 3. [PyCharm](https://www.jetbrains.com/pycharm/download/)
+
+
+
+
 
 
 ## 五、Python之禅：
