@@ -128,5 +128,10 @@ import os
 ---------------------------------------------------------------------------
 import os
 
-[x for x in os.listdir('.') if os.path.isfile(x) and os.path.splitext(x)[1]=='.py']
+[x for x in os.listdir('.') if os.path.isfile(x) and os.path.splitext(x)[1]=='.py']   # 列出当前目录下所有的.py文件
+
+# Output:
+["This's a test file.py"]
+
+
 
