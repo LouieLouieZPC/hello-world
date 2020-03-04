@@ -32,7 +32,7 @@ D:\01.Software\Python
 
 # 查询指定路径下的文件
 import os 
-os.listdir(r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\6.1文件基础')   # 查询当前目录下的文件
+os.listdir(r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\7.1文件基础')   # 查询当前目录下的文件
 '''
 以下为结果：
 ['1.读取.txt文件中的数据.py', '2.Task1（打开并读取文件）.py', '3.写入和添加word.txt文件.py', '4.读取csv数据法一.py', '5.读取csv数据法二 .py', '6.将列表数据写入.csv文件.py', '7.将字典数据写
@@ -42,11 +42,11 @@ os.listdir(r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程
 
 # 删除文件
 import os
-os.remove(r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\6.1文件基础\text.csv')  # 删除文件
+os.remove(r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\7.1文件基础\text.csv')  # 删除文件
 
 # 创建与删除目录
 import os
-file_name=r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\6.1文件基础\test'
+file_name=r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\7.1文件基础\test'
 os.mkdir(file_name)           # 创建文件夹
 os.rmdir(file_name)           # 删除文件夹
 
