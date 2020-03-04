@@ -5,7 +5,7 @@ x=csv.writer(可迭代对象)    # 创建csv库writer类的对象
 x.writerow(列表数据)    # 调用对象函数writerow,将列表数据逐行写入对象
 '''
 
-
+# 读取csv文件
 import csv              # 调用csv模块
 file_name=r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\7.1文件基础\iris.csv'
 with open(file_name,'r') as f:       # 打开，只读
@@ -13,6 +13,7 @@ with open(file_name,'r') as f:       # 打开，只读
     iris=[iris_item for iris_item in reader]     # 列表解析式
 print(iris)
 
+-----------------------------------------------------------------------
 
 # 将列表数据写入csv文件
 import csv      # 调用csv模块
