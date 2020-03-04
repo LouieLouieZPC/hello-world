@@ -8,6 +8,7 @@ x.writeheader()        # 用csv.writerheader函数输入标题
 x.writerows(列表数据)   # 将列表数据写入列表,writerow需要一个可迭代的单元格来编写
 
 '''
+# 读取csv文件
 import csv
 file_name=r'\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\7.1文件基础\iris.csv'
 with open(file_name,'r') as f:

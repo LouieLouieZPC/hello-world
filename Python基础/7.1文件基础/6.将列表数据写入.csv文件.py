@@ -13,7 +13,6 @@ with open(file_name,'r') as f:       # 打开，只读
     iris=[iris_item for iris_item in reader]     # 列表解析式
 print(iris)
 
------------------------------------------------------------------------
 
 # 将列表数据写入csv文件
 import csv      # 调用csv模块
