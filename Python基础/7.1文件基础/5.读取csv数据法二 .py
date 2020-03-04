@@ -16,7 +16,7 @@ x=列表解析式[i['某列标题'] for i in n]
 
 
 import csv     # 调用csv模块
-file_name=r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\6.1文件基础\iris.csv'
+file_name=r'D:\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\7.1文件基础\iris.csv'
 with open(file_name,'r') as f:       # 打开，只读
     reader=csv.DictReader(f)         # 使用csv.DictReader函数（接收一个可迭代的对象，例.csv文件），能返回一个生成器，但是返回的每一个单元格都放在一个字典的值内，而字典的键则是这个单元格的标题
     isir1=[iris_item for iris_item in reader]     # 列表解析式
@@ -45,7 +45,7 @@ with open(file_name,'r') as f:       # 打开，只读
 # 如果用csv.DictReader函数读取CSV文件的某一列，则可以用列的标题（例：Sepal.Length）查询
 
 import csv
-file_name=r'\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\6.1文件基础\iris.csv'
+file_name=r'\01.Software\GitHub\GitHub Repository\hello-world\《Python编程基础》例题练习\7.1文件基础\iris.csv'
 with open(file_name,'r') as f:
     reader=csv.DictReader(f)         # 使用csv.DictReader函数（接收一个可迭代的对象，例.csv文件），能返回一个生成器，但是返回的每一个单元格都放在一个字典的值内，而字典的键则是这个单元格的标题
     isir1=[iris_item['Sepal.Length'] for iris_item in reader]     # 列表解析式
