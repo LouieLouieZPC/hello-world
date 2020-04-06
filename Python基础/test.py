@@ -1,10 +1,6 @@
-import threading, multiprocessing
+def gen(n):
+  for i in range(n):
+    yield(i**2)
 
-def loop():
-    x = 0
-    while True:
-        x = x ^ 1
-
-for i in range(multiprocessing.cpu_count()):
-    t = threading.Thread(target=loop)
-    t.start()
+for i in gen(5):
+  print(i,'',end='')
