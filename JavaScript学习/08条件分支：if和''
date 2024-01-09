@@ -4,3 +4,209 @@
 
 
 
+## 一、`if`语句
+
+1. `if(...){...}` 语句：计算括号里的条件表达式，如果`()`的计算结果是 `true`，就会执行对应的代码块`{}`。
+
+```js
+if (year == 2015) {
+  alert( "That's correct!" );
+  alert( "You're so smart!" );
+}
+```
+
+
+
+2. `if (…)` 语句：会计算圆括号内的表达式，并将计算结果转换为布尔型。
+
+- 数字 `0`、空字符串 `""`、`null`、`undefined` 和 `NaN` 都会被转换成 `false`。因为它们被称为“假值（falsy）”。
+- 其他值被转换为 `true`，所以它们被称为“真值（truthy）”。
+
+```js
+if (0) { // 0 是假值（falsy）因此永远不会执行{}内的代码
+  ...
+}
+  
+if (1) { // 1 是真值（truthy）因此永远会执行{}内的代码
+  ...
+}
+  
+let cond = (year == 2015); // 相等运算符的结果是 true 或 false
+
+if (cond) { // 如果cond是ture，则会运行代码块{}，反之不会运行代码块{}
+  ...
+}
+```
+
+
+
+## 二、“else” 语句
+
+``if (...) {...} else {...}`语句：`if` 语句有时会包含一个可选的 `else` 块。如果判断条件不成立，就会执行`else`后面的代码。
+
+```js
+let year = prompt('In which year was ECMAScript-2015 specification published?', '');
+
+if (year == 2015) {
+  alert( 'You guessed it right!' );
+} else {
+  alert( 'How can you be so wrong?' ); // 2015 以外的任何值
+}
+```
+
+
+
+## 三、“else if”语句
+
+``if (...) {...} else if {...} else {...}`语句：先检查`if`，再检查`else if`。
+
+```js
+let year = prompt('In which year was ECMAScript-2015 specification published?', '');
+
+if (year < 2015) {
+  alert( 'Too early...' );
+} else if (year > 2015) {
+  alert( 'Too late' );
+} else {
+  alert( 'Exactly!' );
+}
+```
+
+
+
+## 四、条件运算符 ‘?’
+
+建议使用if，不要写太长的代码，而多写垂直的代码更容易让人阅读。
+
+### （一）条件运算符`?`的正常使用
+
+语法如下：
+
+计算条件结果，如果结果为真，则返回 `value1`，否则返回 `value2`。
+
+```js
+let result = condition ? value1 : value2;
+```
+
+示例：
+
+```js
+let accessAllowed = (age > 18) ? true : false; //当然也可以将 (age > 18)外面的括号去掉依然会执行。
+let accessAllowed = age > 18; //这行代码同理，可以达到同样效果
+```
+
+
+
+### （二）使用一系列问号 `?` 运算符
+
+使用一系列问号 `?` 运算符可以返回一个取决于多个条件的值。
+
+语法如下：
+
+```js
+let result = condition ? value1 : condition ? value2 : condition ? value3 : value4;
+```
+
+示例：
+
+1.使用`let result = condition ? value1 : condition ? value2 : condition ? value3 : value4;`
+
+```js
+let age = prompt('age?', 18);
+
+let message = (age < 3) ? 'Hi, baby!' :
+  (age < 18) ? 'Hello!' :
+  (age < 100) ? 'Greetings!' :
+  'What an unusual age!';
+
+alert( message );
+```
+
+2.使用 `if..else` 实现上面的逻辑的写法
+
+```js
+if (age < 3) {
+  message = 'Hi, baby!';
+} else if (age < 18) {
+  message = 'Hello!';
+} else if (age < 100) {
+  message = 'Greetings!';
+} else {
+  message = 'What an unusual age!';
+}
+```
+
+
+
+## 五、练习
+
+1. 使用 `if..else` 结构，实现提问 “What’s the “official” name of JavaScript?” 的代码。
+
+如果访问者输入了 “ECMAScript”，输出就提示 “Right!”，否则 —— 输出：“You don’t know? “ECMAScript”!”
+
+```js
+<!DOCTYPE html>
+<html>
+
+<body>
+  <script>
+    'use strict';
+
+    let value = prompt('What is the "official" name of JavaScript?', '');
+
+    if (value == 'ECMAScript') {
+      alert('Right!');
+    } else {
+      alert("You don't know? ECMAScript!");
+    }
+  </script>
+
+
+</body>
+
+</html>
+```
+
+
+
+2. 使用条件运算符 `'?'` 重写下面的 `if` 语句：
+
+```js
+let result;
+
+if (a + b < 4) {
+  result = 'Below';
+} else {
+  result = 'Over';
+}
+```
+
+```js
+let result = (a + b < 4) ? 'Below' : 'Over';
+```
+
+
+
+3. 使用多个三元运算符 `'?'` 重写下面的 `if..else` 语句。
+
+```js
+let message;
+
+if (login == 'Employee') {
+  message = 'Hello';
+} else if (login == 'Director') {
+  message = 'Greetings';
+} else if (login == '') {
+  message = 'No login';
+} else {
+  message = '';
+}
+```
+
+```js
+let message = (login == 'Employee') ? 'Hello' :
+  (login == 'Director') ? 'Greetings' :
+  (login == '') ? 'No login' :
+  '';
+```
+
